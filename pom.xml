@@ -110,7 +110,7 @@
                 <executions>
                     <execution>
                         <id>allure-reports</id>
-                        <phase>post-integration-test</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>

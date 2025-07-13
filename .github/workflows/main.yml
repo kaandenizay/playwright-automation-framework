@@ -54,13 +54,16 @@ jobs:
 
       # Step 6: Run Maven to execute Playwright tests
       - name: Run Playwright Tests
-        run: mvn clean test
+        run: mvn test verify
 
-      # Step 7: Create and serve allure reports
-      - name: Create and serve allure reports
-        run: mvn io.qameta.allure:allure-maven:report
+      # Step 7: Combine allure and cucumber reports together to publish
+      - name: Combine Cucumber and Allure Reports
+        run: |
+          mkdir gh-pages-content
+          cp -r target/site/allure-maven-plugin gh-pages-content/allure
+          cp -r target/cucumber-html-reports.html gh-pages-content/cucumber
 
-      # Step 7: Archive any trace files
+      # Step 8: Archive any trace files
 #      - name: Archive trace files
 #        if: always()
 #        uses: actions/upload-artifact@v4
@@ -74,4 +77,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: target/site/allure-maven-plugin
+          publish_dir: .gh-pages-content
