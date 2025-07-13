@@ -2,7 +2,8 @@ package browser;
 
 import com.microsoft.playwright.*;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import static config.ConfigurationManager.configuration;
@@ -34,9 +35,7 @@ public class BrowserManager {
 
         browser.set(browserType.launch(
                 new BrowserType.LaunchOptions().setHeadless(configuration().headless())
-                        .setArgs(Arrays.asList("--no-sandbox", "--disable-extensions", "--disable-gpu",
-                                "--disable-dev-shm-usage", "--window-size=1920,1080", "--dns-prefetch-disable", "--start-maximized",
-                                "--disable-infobars"))
+                        .setArgs(getBrowserOptions())
                         .setSlowMo(500)
         ));
 
@@ -79,6 +78,27 @@ public class BrowserManager {
 
     public BrowserContext getBrowserContext() {
         return browserContext.get();
+    }
+
+    private List<String> getBrowserOptions() {
+        List<String> browserOptions = new ArrayList<>();
+
+        // Performance & Stability
+        browserOptions.add("--no-sandbox");
+        browserOptions.add("--disable-dev-shm-usage");
+        browserOptions.add("--disable-gpu");
+        browserOptions.add("--disable-extensions");
+
+        // Browser Behavior
+        browserOptions.add("--window-size=1920,1080");
+        browserOptions.add("--start-maximized");
+        browserOptions.add("--disable-notifications");
+        browserOptions.add("--disable-popup-blocking");
+        browserOptions.add("--disable-infobars");
+        browserOptions.add("--disable-translate");
+
+
+        return browserOptions;
     }
 
 }
