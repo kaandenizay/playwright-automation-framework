@@ -62,9 +62,6 @@ jobs:
           mkdir gh-pages-content
           cp -r target/site/allure-maven-plugin gh-pages-content/allure
           cp -r target/cucumber-html-reports gh-pages-content/cucumber
-          
-          echo "📂 Reports copied to:"
-          echo "  $(realpath gh-pages-content)"
 
       # Step 8: Archive any trace files
       #      - name: Archive trace files
