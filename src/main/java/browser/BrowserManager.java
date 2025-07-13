@@ -34,10 +34,13 @@ public class BrowserManager {
 
         browser.set(browserType.launch(
                 new BrowserType.LaunchOptions().setHeadless(configuration().headless())
-                        .setArgs(Arrays.asList("--no-sandbox", "--disable-extensions", "--disable-gpu"))
+                        .setArgs(Arrays.asList("--no-sandbox", "--disable-extensions", "--disable-gpu",
+                                "--disable-dev-shm-usage", "--window-size=1920,1080", "--dns-prefetch-disable", "--start-maximized",
+                                "--disable-infobars"))
+                        .setSlowMo(500)
         ));
 
-        browserContext.set(browser.get().newContext(new Browser.NewContextOptions().setViewportSize(1600, 1200)));
+        browserContext.set(browser.get().newContext(new Browser.NewContextOptions().setViewportSize(null)));
         page.set(browserContext.get().newPage());
         page.get().setDefaultNavigationTimeout(configuration().navigationTimeout());
         page.get().setDefaultTimeout(configuration().actionTimeout());
