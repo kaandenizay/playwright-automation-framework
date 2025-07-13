@@ -56,6 +56,10 @@ jobs:
       - name: Run Playwright Tests
         run: mvn clean test
 
+      # Step 7: Create and serve allure reports
+      - name: Create and serve allure reports
+        run: mvn io.qameta.allure:allure-maven:serve
+
       # Step 7: Archive any trace files
 #      - name: Archive trace files
 #        if: always()
