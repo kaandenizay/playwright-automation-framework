@@ -71,5 +71,5 @@ jobs:
         if: always()  # Ensure this step runs even if tests fail
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PLAYWRIGHT_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/site
