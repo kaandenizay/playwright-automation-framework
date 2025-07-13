@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Jul 13 21:40:28 UTC 2025","Sun Jul 13 21:40:49 UTC 2025","21060","","WebdriverUniversity.com - Contact Us Page","","Valid Contact Us Form Submission - Using random data","","Valid Contact Us Form Submission - Using random data",""
+"passed","Sun Jul 13 21:40:28 UTC 2025","Sun Jul 13 21:40:47 UTC 2025","19794","","WebdriverUniversity.com - Contact Us Page","","Invalid Contact Us Form Submission","","Invalid Contact Us Form Submission",""
+"passed","Sun Jul 13 21:40:28 UTC 2025","Sun Jul 13 21:40:48 UTC 2025","20879","","WebdriverUniversity.com - Contact Us Page","","Valid Contact Us Form Submission","","Valid Contact Us Form Submission",""
+"passed","Sun Jul 13 21:40:48 UTC 2025","Sun Jul 13 21:40:53 UTC 2025","4846","","WebdriverUniversity.com - Login Page","","Positive & Negative Login scenarios","","Positive & Negative Login scenarios",""
+"passed","Sun Jul 13 21:40:48 UTC 2025","Sun Jul 13 21:40:53 UTC 2025","4825","","WebdriverUniversity.com - Login Page","","Positive & Negative Login scenarios","","Positive & Negative Login scenarios",""
+"passed","Sun Jul 13 21:40:47 UTC 2025","Sun Jul 13 21:40:54 UTC 2025","6229","","WebdriverUniversity.com - Contact Us Page","","Valid Contact Us Form Submission - Using different data","","Valid Contact Us Form Submission - Using different data",""
+"passed","Sun Jul 13 21:40:28 UTC 2025","Sun Jul 13 21:40:48 UTC 2025","20760","","WebdriverUniversity.com - Contact Us Page","","Valid Contact Us Form Submission - Using different data","","Valid Contact Us Form Submission - Using different data",""
