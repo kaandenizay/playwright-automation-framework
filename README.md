@@ -8,7 +8,7 @@ This project is a modular, scalable, and maintainable test automation framework 
 project-root/
 ├── src/
 │ ├── main/java/com/
-│ │ ├── browser/ # Browser setup for playwirght instances and  parallel execution
+│ │ ├── browser/ # Browser setup for playwright instances and  parallel execution
 │ │ ├── config/ # Properties reader with owner library 
 │ │ ├── data/ # Data provider class(es) faker, etc.
 │ │ ├── pages/ # Related web pages
@@ -35,13 +35,13 @@ project-root/
 
 ## Running Tests
 Run all tests  
-`mvn clean test`
+`mvn test verify`
 
 Run specific TestGroup  
-`mvn clean test -Dcucumber.filter.tags=${TestGroup}`
+`mvn test -Dcucumber.filter.tags=${TestGroup} verify`
 
 ## Reporting
 - Cucumber reports are automatically generated after test execution
 - Allure reports are automatically generated after test execution
-- To view the report: `allure serve target/allure-results`
+- To view the report: `allure serve target/allure-reports`
 
