@@ -2,6 +2,8 @@ package step_definitions;
 
 import browser.BrowserManager;
 import io.cucumber.java.*;
+import io.qameta.allure.Allure;
+import java.io.ByteArrayInputStream;
 
 public class Hooks {
 
@@ -34,8 +36,9 @@ public class Hooks {
         if (scenario.isFailed()) {
             byte[] screenshot = browserManager.takeScreenshot();
             scenario.attach(screenshot, "image/png", "screenshot");
+//            Allure.addAttachment("screenshot", new ByteArrayInputStream(screenshot));
         }
-        browserManager.tearDown();
+        browserManager.tearDown(scenario);
 
    }
 }

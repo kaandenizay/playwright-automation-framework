@@ -1,7 +1,10 @@
 package browser;
 
 import com.microsoft.playwright.*;
+import io.cucumber.java.Scenario;
+import org.testng.internal.TestMethodContainer;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -40,16 +43,27 @@ public class BrowserManager {
         ));
 
         browserContext.set(browser.get().newContext(new Browser.NewContextOptions().setViewportSize(null)));
+
+        browserContext.get().tracing().start(
+                new Tracing.StartOptions()
+                        .setScreenshots(true)
+                        .setSnapshots(true)
+                        .setSources(true));
+
         page.set(browserContext.get().newPage());
         page.get().setDefaultNavigationTimeout(configuration().navigationTimeout());
         page.get().setDefaultTimeout(configuration().actionTimeout());
         logger.info("Playwright setup complete.");
     }
 
-    public void tearDown() {
+    public void tearDown(Scenario scenario) {
         try {
             logger.info("Tearing down playwright...");
             if (getPage() != null) getPage().close();
+            getBrowserContext().tracing().stop(
+                    new Tracing.StopOptions()
+                            .setPath(Paths.get( "target/traces/" + scenario.getName().replaceAll("[^a-zA-Z0-9]","") + "-trace.zip"))
+            );
             if (getBrowserContext() != null) getBrowserContext().close();
             if (browser.get() != null) browser.get().close();
             if (playwright.get() != null) playwright.get().close();

@@ -6,6 +6,10 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Utils {
 
     private final BrowserManager browserManager;
@@ -50,6 +54,11 @@ public class Utils {
 
     public void fillField(String placeholder, String value) {
         getPage().getByPlaceholder(placeholder).fill(value);
+    }
+
+    public void uploadFile(String filePathAndName, String selector) throws URISyntaxException {
+        Path fileToUpload = Paths.get(ClassLoader.getSystemResource(filePathAndName).toURI());
+        getPage().setInputFiles(selector, fileToUpload);
     }
 
 }

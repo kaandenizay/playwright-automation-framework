@@ -10,7 +10,8 @@ import org.testng.annotations.DataProvider;
         tags = "@regression",  // @smoke and not @ignore
         plugin = {"pretty",
                 "json:target/cucumber.json",
-                "html:target/cucumber-report.html"}
+                "html:target/cucumber-report.html",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 public class CucumberTests extends AbstractTestNGCucumberTests {
 
