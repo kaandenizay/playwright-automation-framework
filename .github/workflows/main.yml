@@ -8,7 +8,7 @@ on:
     branches: [ develop ]   # Run only every pull request for main branch
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -62,14 +62,20 @@ jobs:
           mkdir gh-pages-content
           cp -r target/site/allure-maven-plugin gh-pages-content/allure
           cp -r target/cucumber-html-reports gh-pages-content/cucumber
+          
+          echo "📂 Reports copied to:"
+          echo "  $(realpath gh-pages-content)"
+
+          echo "🧾 Directory structure:"
+          find gh-pages-content
 
       # Step 8: Archive any trace files
-#      - name: Archive trace files
-#        if: always()
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: traces
-#          path: target/traces/*.zip
+      #      - name: Archive trace files
+      #        if: always()
+      #        uses: actions/upload-artifact@v4
+      #        with:
+      #          name: traces
+      #          path: target/traces/*.zip
 
       # Step 8: Deploy Allure report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
