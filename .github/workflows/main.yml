@@ -58,7 +58,7 @@ jobs:
 
       # Step 7: Create and serve allure reports
       - name: Create and serve allure reports
-        run: mvn io.qameta.allure:allure-maven:serve
+        run: mvn io.qameta.allure:allure-maven:report
 
       # Step 7: Archive any trace files
 #      - name: Archive trace files
@@ -74,4 +74,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: target/site
+          publish_dir: target/site/allure-maven-plugin

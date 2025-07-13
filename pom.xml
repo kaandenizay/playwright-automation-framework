@@ -105,7 +105,7 @@
                 <version>2.15.0</version>
                 <configuration>
                     <reportVersion>2.29.0</reportVersion>
-                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+                    <resultsDirectory>${project.build.directory}/allure-reports</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>
