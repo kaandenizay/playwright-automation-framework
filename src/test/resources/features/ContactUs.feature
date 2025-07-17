@@ -21,7 +21,7 @@ Feature: WebdriverUniversity.com - Contact Us Page
 #    And I enter an email address
     And I type a comment
     And I click on the submit button
-    Then I should be presented with an unsuccessful "Error: all fields are required4535" message
+    Then I should be presented with an unsuccessful "Error: all fields are required" message
     Then I should be presented with an unsuccessful "Error: Invalid email address" message
 
   @randomData

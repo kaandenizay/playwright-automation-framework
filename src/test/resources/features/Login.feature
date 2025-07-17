@@ -14,7 +14,7 @@ Feature: WebdriverUniversity.com - Login Page
 
     Examples:
       | username  | password     | message              |
-      | webdriver | webdriver123 | validation succeeded123412 |
-      | webdriver | qwerty123    | validation failed2141    |
+      | webdriver | webdriver123 | validation succeeded |
+      | webdriver | qwerty123    | validation failed    |
 
 
