@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>playwright-automation-framework</td>
         <td>1</td>
-      <td>17 Jul 2025, 13:11</td>
+      <td>17 Jul 2025, 13:21</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@login</td>
-          <td      class="passed"    >6</td>
-          <td      class="failed"    >2</td>
+          <td      class="passed"    >8</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">8</td>
 
+          <td  class="passed"    >2</td>
           <td >0</td>
-          <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="3597888055">3.597</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="3441358824">3.441</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -186,12 +186,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.782</span>
+  <span class="lead-duration duration">1.720</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Positive &amp; Negative Login scenarios</span>
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -224,7 +224,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">step_definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.691</span>
+  <span class="lead-duration duration">0.714</span>
 
           </div>
 
@@ -241,9 +241,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -253,7 +253,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -288,7 +288,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I type password as <span class="argument">&quot;webdriver123&quot;</span></span>
 
-  <span class="lead-duration duration">0.519</span>
+  <span class="lead-duration duration">0.516</span>
 
 </div>
 
@@ -315,7 +315,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I click on the login button</span>
 
-  <span class="lead-duration duration">0.728</span>
+  <span class="lead-duration duration">0.673</span>
 
 </div>
 
@@ -338,11 +338,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should be see the <span class="argument">&quot;validation succeeded123412&quot;</span> alert message</span>
+  <span class="name">I should be see the <span class="argument">&quot;validation succeeded&quot;</span> alert message</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -350,26 +350,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: The alert text does not match the expected text expected [validation succeeded123412] but found [validation succeeded]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at pages.LoginPage.verifyAlertText(LoginPage.java:34)
-	at step_definitions.LoginSteps.iShouldBeSeeTheAlertMessage(LoginSteps.java:37)
-	at &#10045;.I should be see the &quot;validation succeeded123412&quot; alert message(file:///home/runner/work/playwright-automation-framework/playwright-automation-framework/src/test/resources/features/Login.feature:13)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -389,7 +369,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -401,13 +381,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-5" class="inner-level collapse collapsable-details ">
+    <div id="after-4" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.472</span>
+  <span class="lead-duration duration">0.168</span>
 
           </div>
 
@@ -416,21 +396,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
-      <a>screenshot</a>
-      <a href="embeddings/embedding_246679001.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-6" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_246679001.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
         </div>
     </div>
@@ -456,12 +421,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.815</span>
+  <span class="lead-duration duration">1.720</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Positive &amp; Negative Login scenarios</span>
 
@@ -472,11 +437,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details  in ">
+  <div id="element-5" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-8">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -488,13 +453,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-8" class="inner-level collapse collapsable-details ">
+    <div id="before-6" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">step_definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.517</span>
+  <span class="lead-duration duration">0.679</span>
 
           </div>
 
@@ -511,9 +476,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -523,7 +488,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-7" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -558,7 +523,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I type password as <span class="argument">&quot;qwerty123&quot;</span></span>
 
-  <span class="lead-duration duration">0.518</span>
+  <span class="lead-duration duration">0.517</span>
 
 </div>
 
@@ -585,7 +550,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I click on the login button</span>
 
-  <span class="lead-duration duration">0.764</span>
+  <span class="lead-duration duration">0.670</span>
 
 </div>
 
@@ -608,9 +573,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should be see the <span class="argument">&quot;validation failed2141&quot;</span> alert message</span>
+  <span class="name">I should be see the <span class="argument">&quot;validation failed&quot;</span> alert message</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -620,26 +585,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-10" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: The alert text does not match the expected text expected [validation failed2141] but found [validation failed]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at pages.LoginPage.verifyAlertText(LoginPage.java:34)
-	at step_definitions.LoginSteps.iShouldBeSeeTheAlertMessage(LoginSteps.java:37)
-	at &#10045;.I should be see the &quot;validation failed2141&quot; alert message(file:///home/runner/work/playwright-automation-framework/playwright-automation-framework/src/test/resources/features/Login.feature:13)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -659,7 +604,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -671,13 +616,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-11" class="inner-level collapse collapsable-details ">
+    <div id="after-8" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.325</span>
+  <span class="lead-duration duration">0.158</span>
 
           </div>
 
@@ -686,21 +631,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
-      <a>screenshot</a>
-      <a href="embeddings/embedding_246679001.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-12" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_246679001.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
         </div>
     </div>
