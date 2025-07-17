@@ -37,9 +37,6 @@ project-root/
 Run all tests  
 `mvn test verify`
 
-Run specific TestGroup  
-`mvn test -Dcucumber.filter.tags=${TestGroup} verify`
-
 ## Reporting
 - Cucumber reports are automatically generated after test execution
 - Allure reports are automatically generated after test execution
