@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
                 "html:target/cucumber-report.html",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
-public class CucumberTests extends AbstractTestNGCucumberTests {
+public class CucumberRunner extends AbstractTestNGCucumberTests {
 
     @Override
     @DataProvider(parallel = true)

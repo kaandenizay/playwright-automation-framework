@@ -2,7 +2,7 @@
 <suite name="CucumberSuite" data-provider-thread-count="4" parallel="true" >
     <test name="Cucumber Tests">
         <classes>
-            <class name="runner.CucumberTests"/>
+            <class name="runner.CucumberRunner"/>
         </classes>
     </test>
 </suite>
