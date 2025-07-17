@@ -56,6 +56,19 @@ jobs:
       - name: Run Playwright Tests
         run: mvn clean verify -Dmaven.test.failure.ignore=true
 
+      - name: List target folder contents
+        if: always()
+        run: |
+          echo "=== Contents of target directory ==="
+          ls -R target || echo "target not found"
+
+      - name: Archive Cucumber HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: target/cucumber-html-reports/
+
       # Step 7: Combine allure and cucumber reports together to publish
       - name: Combine Cucumber and Allure Reports
         run: |
