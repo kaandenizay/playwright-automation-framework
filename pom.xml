@@ -142,8 +142,9 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                        <outputDirectory>${project.build.directory}</outputDirectory>
-                        <inputDirectory>${project.build.directory}</inputDirectory>
+                            <skip>false</skip>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
                         <jsonFiles>
                             <param>/cucumber*.json</param>
                         </jsonFiles>
