@@ -4,10 +4,6 @@ import browser.BrowserManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pages.LoginPage;
-import util.Utils;
-
-import static org.testng.Assert.assertEquals;
-
 
 public class LoginSteps{
 
